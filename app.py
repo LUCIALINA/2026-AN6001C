@@ -1,10 +1,10 @@
 #web app
 
 from flask import Flask, request, render_template
-import pickle
+import joblib
 
 with open("DBS_SGD.pkl", "rb") as f:
-    dbsModel = pickle.load(f)
+    dbsModel = joblib.load(f)
 
 app = Flask(__name__)
 
